@@ -1,4 +1,4 @@
-# sage-acf-menu-icons
+# Sage Advanced Custom Fields Menu Icons
 
 Adds ACF menu icon fields to menu items in WordPress. This package is intended for [Sage](https://roots.io/sage)-based themes.
 
