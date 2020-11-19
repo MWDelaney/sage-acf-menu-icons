@@ -1,0 +1,19 @@
+{
+  "name": "mwdelaney/sage-acf-menu-icons",
+  "description": "Add icons WordPress menu items in a Sage-based theme",
+  "keywords": ["wordpress", "menu", "advanced custom fields"],
+  "homepage": "https://github.com/MWDelaney/sage-acf-menu-icons",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Michael W. Delaney",
+      "email": "michael@michaeldelaney.me"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.2"
+  },
+	"autoload": {
+    "files": ["sage-acf-menu-icons.php"]
+  }
+}
