@@ -17,12 +17,12 @@ if (! function_exists('add_action')) {
 add_filter('acf/settings/load_json', function ($paths) {
 
     // append path
-    $paths[] = dirname(__FILE__). 'src/json';
-    print_r($paths);
+    $paths[] = dirname(__FILE__). '/src/json';
 
     // return
     return $paths;
-});
+}, 10);
+
 
 /**
  * Add ACF menu icon to menus if present
