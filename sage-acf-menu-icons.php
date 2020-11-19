@@ -33,7 +33,7 @@ add_filter('wp_nav_menu_objects', function ($items, $args) {
         // Get data from ACF fields
         $icon = get_field('icon', $item);
         $hide_label = get_field('hide_label', $item);
-        $position = get_field('position', $item);
+        $position = get_field('icon_position', $item);
 
         // Get the icon contents
         $icon_contents = file_get_contents($icon);
