@@ -32,15 +32,15 @@ add_filter('wp_nav_menu_objects', function ($items, $args) {
     foreach ($items as &$item) {
         // Get data from ACF fields
         $icon = get_field('icon', $item);
-        $hide_label = get_field('hide_label', $item);
+        $hideLabel = get_field('hide_label', $item);
         $position = get_field('icon_position', $item);
 
         // Get the icon contents
         $iconPath = get_attached_file($icon);
-        $icon_contents = file_get_contents($iconPath);
+        $iconContents = file_get_contents($iconPath);
 
         // Maybe hide label
-        if ($hide_label) {
+        if ($hideLabel) {
             // Wrap the title in a span with Bootstrap's screen-reader-only class
             $item->title = '<span class="sr-only">' . $item->title . '</span>';
         }
@@ -48,9 +48,9 @@ add_filter('wp_nav_menu_objects', function ($items, $args) {
         // If the icon exists, append icon
         if ($icon) {
             if ($position == 'before') {
-                $item->title = $icon_contents . $item->title;
+                $item->title = $iconContents . $item->title;
             } else {
-                $item->title = $item->title . $icon_contents;
+                $item->title = $item->title . $iconContents;
             }
         }
     }
