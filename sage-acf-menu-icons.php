@@ -37,7 +37,7 @@ add_filter('wp_nav_menu_objects', function ($items, $args) {
 
         // Get the icon contents
         $iconPath = get_attached_file($icon);
-        $iconContents = file_get_contents($iconPath);
+        $iconContents = ($iconPath) ? file_get_contents($iconPath) : '';
 
         // Maybe hide label
         if ($hideLabel) {
